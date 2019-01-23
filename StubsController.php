@@ -86,7 +86,7 @@ TPL;
 
                     if (is_callable($definition, true)) {
                         try{
-                            $definition = \Yii::$app->get($name, false);
+                            $definition = \Yii::createObject($definition);
                         } catch(\Exception $exception){
                             continue;
                         }
